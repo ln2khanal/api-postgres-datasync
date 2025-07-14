@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: data_sync_service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_PORT=${DATABASE_PORT}
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - sync_data:/app/data
+    command: python lambda_function.py
+volumes:
+  sync_data:
