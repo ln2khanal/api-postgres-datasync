@@ -18,13 +18,13 @@ sync
 
 1. **Clone the Repository**
    ```bash
-   git clone git@github.com:ln2khanal/api-postgres-datasync.git
+   git clone git@github.com:ln2khanal/sync.git
    cd sync
    ```
 
 2. **Build the Docker Image**
    ```bash
-   docker build -t sync .
+   docker build -t sync.
    ```
 
 3. **Run the Application with Docker Compose**
