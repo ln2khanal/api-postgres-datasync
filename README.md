@@ -18,7 +18,7 @@ sync
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:ln2khanal/api-postgres-datasync.git
    cd sync
    ```
 
